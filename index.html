@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>More Ice, More Sweet | Elite 50K Puffs</title>
+  <meta name="description" content="Black Elite 50K puffs disposable vape. 10 iced flavors, ₱270 each.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Age gate -->
+  <div class="gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate-box">
+      <h2 id="gateTitle">Are you 18 or older?</h2>
+      <p>This site sells nicotine products. You must be of legal age to enter.</p>
+      <div class="gate-actions">
+        <button class="btn btn-primary" id="gateYes">Yes, I'm 18+</button>
+        <a class="btn btn-ghost" href="https://www.google.com">No, leave</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#top">More Ice, More Sweet</a>
+    <nav>
+      <a href="#flavors">Flavors</a>
+      <a href="#specs">Specs</a>
+      <a href="#warning">Notice</a>
+    </nav>
+    <button class="cart-btn" id="cartOpen" aria-label="Open cart">
+      Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-sub">Black Elite</p>
+        <h1>More Ice,<br>More Sweet</h1>
+        <p class="hero-badge">Elite <strong>50K</strong> Puffs</p>
+        <p class="hero-copy">Ten fruity flavors with an extra-cold finish. Mesh coil, transparent pod, and up to 50,000 puffs.</p>
+        <div class="hero-actions">
+          <a href="#flavors" class="btn btn-primary">Shop flavors</a>
+          <span class="hero-price">₱270 each</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="images/device.jpg" alt="Black Elite 50K disposable vape in Pink Sunset, splashing through ice water" width="1335" height="1905">
+      </div>
+    </section>
+
+    <!-- Specs -->
+    <section class="specs" id="specs" aria-label="Product features">
+      <ul>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="5"/><path d="M15 15v18M20 15v18M25 15v18M30 15v18M35 15v18"/></svg>
+          <span>Mesh Coil</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 7C17 17 12 23 12 30a12 12 0 0 0 24 0c0-7-5-13-12-23z"/><path d="M18 31a6 6 0 0 0 6 6"/></svg>
+          <span>30 MG/ML<br>Freebase</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="7" width="30" height="34" rx="5"/><path d="M9 28c6-4 10 4 15 0s9 4 15 0"/></svg>
+          <span>Transparent</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 18h24a5 5 0 1 0-5-5"/><path d="M6 26h32a5 5 0 1 1-5 5"/><path d="M6 34h16"/></svg>
+          <span>Approximately<br>50000 Puffs Up</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Flavors -->
+    <section class="flavors" id="flavors">
+      <div class="section-head">
+        <h2>Pick your flavor</h2>
+        <p>Ten flavors, one price: <strong>₱270</strong> each.</p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="warning" id="warning">
+      <h2>Notice</h2>
+      <p>This product contains nicotine, which is addictive. For adults 18 and older only. Not for use by non-smokers, pregnant or breastfeeding women, or anyone with a heart condition. Keep out of reach of children.</p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>More Ice, More Sweet</strong> &middot; Elite 50K Puffs
+    <span>Black Elite is a trademark of its owner. Images shown for product reference.</span>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head">
+      <h3>Your cart</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Close cart">&times;</button>
+    </div>
+    <ul class="cart-list" id="cartList"></ul>
+    <p class="cart-empty" id="cartEmpty">Your cart is empty. Add a flavor to get started.</p>
+    <div class="drawer-foot">
+      <div class="total"><span>Total</span><strong id="cartTotal">₱0</strong></div>
+      <button class="btn btn-primary btn-block" id="checkout" disabled>Copy order summary</button>
+      <button class="btn btn-ghost btn-block" id="clearCart">Clear cart</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
